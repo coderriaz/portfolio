@@ -1,0 +1,76 @@
+@media screen and (max-width:1200px) {
+    .row{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .menu-item{
+        top: 35%;
+    }
+}
+@media screen and (max-width:1024px) {
+    .grid-about-container{
+        grid-template-columns:1fr;
+        text-align: center;
+    }
+    .paul-image{
+        width: 45%;
+    }
+    .grid-latest-work-container{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 30px;
+    }
+    .grid-process-container{
+        grid-template-columns:1fr 1fr;
+        grid-gap: 30px;
+    }
+    .close-btn ion-icon{
+        right: 30px;
+    }
+    .menu-item{
+        top: 35%;
+    }
+}
+@media screen and (max-width:768px) {
+    .grid-contact-container {
+        grid-template-columns:1fr;
+    }
+    .grid-experience-education-container{
+        grid-template-columns:1fr;
+    }
+    .paul-image{
+        width: 60%;
+    }
+    #testimonial{
+        background-position: right;
+    }
+    .menu-item{
+        top: 35%;
+    }
+    .grid-latest-work-container{
+        grid-auto-rows: auto;
+    }
+}
+@media screen and (max-width:480px) {
+    .grid-process-container{
+        grid-template-columns: 1fr;
+    }
+    .paul-image{
+        width: 90%;
+    }
+    html,body{
+        font-size: 8px;
+    }
+    #testimonial{
+        background-position: right;
+    }
+    .grid-latest-work-container{
+        grid-template-columns:1fr;
+        grid-gap: 20px;
+    }
+    .grid-latest-work-items img{
+        height: auto;
+    }
+    .grid-latest-work-container{
+        grid-auto-rows: auto;
+    }
+}

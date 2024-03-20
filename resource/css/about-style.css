@@ -1,0 +1,522 @@
+/*============================================
+        Template Name:Paul Lapkin-portfolio template
+        URL:
+        Description:An Awesome Portfolio Template
+        Author:Riaz Mahmud
+        Version:1.0
+==============================================*/
+
+/*============================================
+        CSS INDEX:
+        1.COMMON CSS
+        2.HEADER/HERO SECTION
+        3.ABOUT SECTION
+        4.WORKING PROCESS
+        5.EXPERIENCE-EDUCATION
+        6.MY LATEST WORK
+        7.TESTIMONIAL
+        8.CONTACT
+        9.FOOTER
+==============================================*/
+
+/*============================================
+        1.COMMON CSS
+==============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;700&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+html,body{
+        background-color: #fff;
+        color: #000;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
+}
+a,
+a:hover {
+        text-decoration: none;
+        color: #fff;
+}
+ul{
+        margin: 0;
+        padding: 0;
+}
+p{
+        margin-top: 0;
+}
+h1,h2,h3,h4{
+        font-family: "raleway", sans-serif;
+        margin-top: 0;
+        font-weight: 700;
+}
+h1{
+        font-weight: 700;
+        font-size: 680%;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+}
+h2{
+        font-size: 400%;
+        color: #000;
+}
+h3{
+        color: #fff;
+        font-size: 260%;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+}
+h4{
+        font-size: 160%;
+}
+ul li{
+        list-style-type: none;
+}
+
+/*============================================
+        START REUSEABLE CPMPONENTS
+==============================================*/
+
+.row{
+        max-width: 1140px;
+        margin: auto;
+}
+section,
+#about{
+        padding: 120px 0;
+}
+.btn:link,
+.btn:visited,
+.btn{
+        width: 204px;
+        background: #ff2b4a;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        font-size: 160%;
+        padding: 10px 0;
+        border: 2px solid #ff2b4a;
+        transition: .5s;
+        cursor: pointer;
+}
+.btn:hover,
+.btn:active{
+        background: transparent;
+        color: #ff2b4a;
+}
+.section-tittle{
+        text-align: center;
+        margin-bottom: 50px;
+}
+.section-tittle p{
+        font-size: 160%;
+        color: #6f6f6f;
+        margin-top: 25px;
+}
+/*============================================
+        END REUSEABLE CPMPONENTS
+==============================================*/
+
+/*============================================
+        2.HEADER/HERO SECTION
+==============================================*/
+#hero{
+        height: 100vh;
+        background:linear-gradient(rgb(0, 0, 0, 0.8),rgb(0, 0, 0, 0.8)), url(img/hero.jpg) no-repeat center / cover;
+}
+.logo{
+        float: left;
+        height: 50px;
+        margin-top: 50px;
+}
+.nav-icon{
+        float: right;
+        color: #fff;
+        margin-top: 50px;
+}
+.nav-icon ion-icon{
+        font-size: 450%;
+        border: 1px solid #fff;
+}
+nav.uk-sticky{
+        background: rgb(0, 0, 0, 0.8);
+}
+nav.uk-sticky .logo,
+nav.uk-sticky .nav-icon{
+        margin:18px 0;
+}
+.hero-text-box{
+        max-width: 1140px;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+h1::before{
+        content: "";
+        height: 2px;
+        width: 98%;
+        background: #fff;
+        display: block;
+}
+h1::after{
+        content: "";
+        height: 2px;
+        width: 98%;
+        background: #fff;
+        display: block;
+}
+.hero-text-box span{
+        font-size: 235%;
+        color: #fff;
+        margin-left: -8px;
+}
+.scroll-down{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        margin: auto;
+        text-align: center;
+}
+.scroll-down a ion-icon{
+        font-size: 600%;
+        position: relative;
+        animation: down-arrow 1.5s infinite ease-in-out;
+}
+@keyframes down-arrow{
+        0%{
+                top: 10px;
+        }
+        50%{
+                top: 20px;
+        }
+        100%{
+                top: 10px;
+        }
+}
+/*==HAMBARGER MENU==*/
+.menu-container{
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0);
+        z-index: 99999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+}
+.close-btn ion-icon{
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        color: #fff;
+        font-size: 500%;
+}
+.close-btn ion-icon:hover{
+        cursor: pointer;
+}
+.menu-item{
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: inline-block;
+}
+.menu-item ul li{
+        margin: 15px 0;
+}
+.menu-item ul li:hover a{
+        font-size: 320%;
+        color: #ff2b4a;
+}     
+.menu-item ul li a{
+        font-size: 300%;
+        color: #fff;
+        text-transform: uppercase;
+        transition: 0.3s;
+}
+
+/*============================================
+        3.ABOUT SECTION
+==============================================*/
+.grid-about-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 50px;
+}
+.paul-image{
+        width: 80%;
+}
+.introduction{
+        font-size: 180%;
+        color: #39697d;
+        font-weight: 700;
+}
+.description{
+        font-size: 160%;
+        color: #39697d;
+        margin: 45px 0;
+}
+/*============================================
+        4.MY WORKING PROCESS
+==============================================*/
+#process{
+        background: #f6f6f6;
+}
+.grid-process-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 50px;
+        color: #fff;
+        text-align: center;
+}
+.grid-process-items{
+        padding: 65px 0;
+}
+.grid-process-items ion-icon{
+        font-size: 400%;
+        margin-bottom: 22px;
+}
+.grid-process-items:nth-child(1){
+        background: #10c6fc;
+}
+.grid-process-items:nth-child(2){
+        background: #835aeb;
+}
+.grid-process-items:nth-child(3){
+        background: #002453;
+}
+.grid-process-items:nth-child(4){
+        background: #ff2b4a;
+}
+
+.grid-process-items h4{
+        text-transform: uppercase;
+        color: #fff;
+}
+
+/*============================================
+        5.EXPERIENCE-EDUCATION
+==============================================*/
+
+#experience{
+        background: linear-gradient(45deg, hsla(272, 6%, 44%, 1) 0%, hsla(193, 47%, 32%, 1) 48%, hsla(305, 6%, 44%, 1) 100%);
+}
+.grid-experience-education-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+}
+.grid-experienc-items,
+.grid-education-items{
+        padding: 50px 30px;
+}
+.grid-experienc-items{
+        background: linear-gradient(45deg, hsla(254, 11%, 44%, 1) 0%, hsla(213, 23%, 40%, 1) 70%);
+}
+.grid-education-items{
+        background: linear-gradient(45deg, hsla(213, 23%, 40%, 1) 0%, hsla(254, 11%, 44%, 1) 100%);
+}
+.grid-experienc-items .job h4,
+.grid-education-items .educations h4{
+        font-size: 180%;
+        color: #fff; 
+}
+.grid-experienc-items .job span,
+.grid-education-items .educations span{
+        font-size: 160%;
+        color: #a8a8a9;
+}
+#experience hr{
+        margin: 15px 0;
+}
+
+/*============================================
+        6.MY LATEST WORK 
+==============================================*/
+#latest-work{
+        padding: 100px 0;
+}
+.grid-latest-work-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(250px, auto);
+}
+.grid-latest-work-items{
+        background: #10c6fc;
+        overflow: hidden;
+}
+.grid-latest-work-items img:hover{
+        transform: scale(1.3);
+}
+.grid-latest-work-items img{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.5s;
+}
+.grid-latest-work-items:nth-child(5){
+        grid-column: 1/3;
+        height: 260px;
+}
+.uk-lightbox{
+        background: rgb(0, 0, 0,0.8);
+}
+.uk-lightbox-items img{
+        border: 10px solid #fff;
+        width: 100vh;
+        height: 60vh;
+}
+.uk-lightbox-toolbar{
+        font-size: 160%;
+}
+#latest-work .section-tittle{
+        margin-bottom: 0;
+}
+.latest-work-filter{
+        text-align: center;
+        margin-bottom: 25px;
+}
+.latest-work-filter button{
+        background: #000;
+        border: 1px solid #000;
+        color: #fff;
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 160%;
+        transition: .5s;
+}
+.latest-work-filter button:hover{
+        cursor: pointer;
+        background: #ff2b4a;
+        color: #000;
+}
+.latest-work-filter .mixitup-control-active{
+        background: #ff2b4a;
+        color: #000;
+}
+
+/*============================================
+        6.TESTIMONIAL
+==============================================*/
+
+#testimonial{
+        background: url(img/testimonial-img.jpg) no-repeat center / cover;
+}
+.grid-testimonial-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+.double-logo img{
+        height: 45px;
+}
+#testimonial p{
+        font-size: 160%;
+        margin:30px 0;
+}
+.signature{
+        margin-bottom: 30px;
+}
+.signature img{
+        height: 45px;
+}
+#testimonial span{
+        font-size: 140%;
+}
+
+/*============================================
+        8.CONTACT
+==============================================*/
+
+#contact{
+        background:url(img/unsplash8.jpg) no-repeat center / cover;
+}
+.grid-contact-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+}
+.grid-contact-items:nth-child(1){
+        background: rgb(0, 0, 0, 0.6);
+        padding: 50px 30px;
+}
+.single-form input[type="text"],
+.single-form input[type="email"],
+.single-form textarea{
+        width: 100%;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-size: 140%;
+        padding: 10px;
+        margin: 10px 0;
+}
+.single-form-btn{
+        text-align: right;
+        margin-top: 20px;
+}
+.nested-grid-contact-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap:10px;
+}
+.nested-grid-contact-items{
+        background: rgb(0, 0, 0, 0.6);
+        padding: 45px 30px;
+}
+.nested-grid-contact-items p{
+        color: #fff;
+        font-size: 160%;
+}
+/*============================================
+        9.FOOTER
+==============================================*/
+
+#footer{
+        background: #222222;
+        padding: 50px 0;
+        text-align: center;
+}
+.social-link ul li{
+        display: inline-block;
+}
+.social-link ul li a ion-icon{
+        font-size: 200%;
+        color: #fff;
+        border-right: 1px solid #fff;
+        padding: 0 10px;
+}
+.social-link ul li:hover a ion-icon{
+        color: #ff2b4a;
+}
+.social-link{
+        margin-bottom: 15px;
+}
+.copyright{
+        color: #fff;
+        font-size: 120%;
+}
+.totop .uk-totop {
+        padding:8px 5px;
+        color: #999;
+        transition: .5s;
+        border: 1px solid #f5f5f5;
+}
+.totop .uk-totop:hover{
+        background: #fff;
+        color: #000;
+}
